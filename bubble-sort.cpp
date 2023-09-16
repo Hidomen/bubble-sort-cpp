@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 void sortMechanism(int sort[], int size){
 int temp;
 
@@ -17,9 +15,9 @@ for ( int j = 0; j < size - i - 1; j++){
 }
 
 // shows sorted ver.
-cout << endl;
+std::cout << '\n';
 for ( int k = 0; k < size; k++){
-    cout << sort[k] << " ";
+    std::cout << sort[k] << " ";
     }
 
 }
@@ -29,11 +27,11 @@ int main(){
     int amount;
 
     do { // loop bigger than 1
-    cout << "------------------------------" << endl;
-    cout << "How many numbers do you sort?:" << endl;
-    cin >> amount;
+    std::cout << "------------------------------\n";
+    std::cout << "How many numbers do you sort?:\n";
+    std::cin >> amount;
     if ( amount <= 1 ){
-        cout << "Invalid respond amount of numbers must be bigger than 1!" << endl;
+        std::cout << "Invalid respond amount of numbers must be bigger than 1!\n";
         }
     } while (amount <= 1);
 
@@ -42,13 +40,13 @@ int main(){
 
     // typing numbers
     for (int i = 0; i < size; i++){
-        cout << "Enter Number #" << i + 1 << " :" << endl;
-        cin >> numbers[i];
+        std::cout << "Enter Number #" << i + 1 << " :\n";
+        std::cin >> numbers[i];
         }
 
     // show unsorted-numbers
     for (int show : numbers){
-        cout << show << " ";
+        std::cout << show << " ";
         }
     sortMechanism(numbers, size);
 
